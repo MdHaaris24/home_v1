@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:home/custom_appbar.dart';
+import 'package:home/navigation_drawer.dart';
 
 class PackageMenu extends StatelessWidget {
   final Map<String, String> menuItems;
@@ -8,9 +10,8 @@ class PackageMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(menuItems["title"]!),
-      ),
+      appBar: CustomAppBar(title: menuItems["title"]!),
+      drawer: NavDrawer(),
       body: ListView.builder(
         shrinkWrap: true,
         itemCount: menuItems.length,

@@ -8,7 +8,7 @@ class PackageHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 400, // Set a fixed height for the ListView
       child: ListView.builder(
         shrinkWrap: true,

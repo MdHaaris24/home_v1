@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:home/custom_appbar.dart';
+import 'package:home/navigation_drawer.dart';
 
 class ServiceMenu1 extends StatefulWidget {
   final Map<String, String> menuItems;
@@ -45,6 +46,7 @@ class _ServiceMenu1State extends State<ServiceMenu1> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(title: "Service 1"),
+      drawer: NavDrawer(),
       body: Row(
         children: [
           // Left side menu with images on top and text below
