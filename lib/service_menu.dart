@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:home/custom_appbar.dart';
+import 'package:home/service_menu1.dart';
 
 class ServiceMenu extends StatelessWidget {
   final Map<String, String> menuItems;
@@ -8,9 +10,7 @@ class ServiceMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(menuItems["title"]!),
-      ),
+      appBar: CustomAppBar(title: menuItems["title"]!),
       body: ListView.builder(
         shrinkWrap: true,
         itemCount: menuItems.length,
@@ -41,7 +41,16 @@ class ServiceMenu extends StatelessWidget {
                         ),
                         SizedBox(height: 10),
                         ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ServiceMenu1(
+                                  menuItems: menuItems,
+                                ),
+                              ),
+                            );
+                          },
                           child: Text("Learn More"),
                         ),
                       ],
