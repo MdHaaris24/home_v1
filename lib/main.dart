@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:home/home_page.dart';
+import 'package:home/theme.dart';
+import 'package:home/welcome_screen.dart';
 
 void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      title: 'Flutter Demo',
+      theme: lightMode,
+      home: WelcomeScreen(),
     ),
   );
 }

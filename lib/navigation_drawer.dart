@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:home/home_page.dart';
+import 'package:home/contact_us.dart';
+import 'package:home/about_us.dart';
+import 'package:home/service_menu.dart';
 
 class NavDrawer extends StatelessWidget {
   const NavDrawer({super.key});
@@ -25,16 +29,21 @@ class NavDrawer extends StatelessWidget {
             leading: Icon(Icons.home),
             title: Text('Home'),
             onTap: () {
-              Navigator.pop(context);
-              // Handle navigation to Home
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => HomePage()),
+              );
             },
           ),
           ListTile(
             leading: Icon(Icons.build),
             title: Text('Services'),
             onTap: () {
-              Navigator.pop(context);
-              // Handle navigation to Services
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => ServiceMenu(menuItems: {})),
+              );
             },
           ),
           ListTile(
@@ -49,16 +58,20 @@ class NavDrawer extends StatelessWidget {
             leading: Icon(Icons.contact_mail),
             title: Text('Contact Us'),
             onTap: () {
-              Navigator.pop(context);
-              // Handle navigation to Contact Us
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ContactUsPage()),
+              );
             },
           ),
           ListTile(
             leading: Icon(Icons.info),
             title: Text('About Us'),
             onTap: () {
-              Navigator.pop(context);
-              // Handle navigation to About Us
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => AboutUsPage()),
+              );
             },
           ),
         ],
