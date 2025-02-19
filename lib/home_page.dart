@@ -9,7 +9,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: "Home"),
+      appBar: CustomAppbar(title: "Home"),
       drawer: NavDrawer(),
       body: EventMenu(),
     );

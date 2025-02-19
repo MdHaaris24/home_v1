@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:home/cart.dart';
 import 'package:home/profile.dart';
+import 'package:home/custom_search.dart';
 
-class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
+class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
+  final List<String> searchData = [
+    "Birthday",
+    "Wedding",
+    "Reception",
+    "Engagement",
+    "Baby Shower",
+  ];
 
-  const CustomAppBar({super.key, required this.title});
+  CustomAppbar({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +33,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         IconButton(
           icon: Icon(Icons.search),
           onPressed: () {
-            // Handle search button press
+            showSearch(
+              context: context,
+              delegate: CustomSearch(data: searchData),
+            );
           },
         ),
         IconButton(

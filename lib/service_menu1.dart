@@ -45,7 +45,7 @@ class _ServiceMenu1State extends State<ServiceMenu1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: "Service 1"),
+      appBar: CustomAppbar(title: "Service 1"),
       drawer: NavDrawer(),
       body: Row(
         children: [

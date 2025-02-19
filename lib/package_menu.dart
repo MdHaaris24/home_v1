@@ -10,7 +10,7 @@ class PackageMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: menuItems["title"]!),
+      appBar: CustomAppbar(title: menuItems["title"]!),
       drawer: NavDrawer(),
       body: ListView.builder(
         shrinkWrap: true,
